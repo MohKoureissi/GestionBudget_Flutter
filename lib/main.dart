@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
       // title: "LogIn Screen",
       debugShowCheckedModeBanner: false,
 
-      home: Finances()
+      home: Budget()
       );//Place SignUp function here to Observe SignUp Screen.
   }
   //koureissi

@@ -1,5 +1,8 @@
 
+import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:ika_musaka/screens/Depense.dart';
 
 class Budget extends StatelessWidget{
    @override
@@ -67,9 +70,9 @@ class Budget extends StatelessWidget{
             ) , // Fin de la ligne
            //    FlatButton(onPressed)
             ElevatedButton(
-                        onPressed: () {
+                        onPressed:  navigateTo
                           // Your button's onPressed logic here
-                        },
+                        ,
                         style: ElevatedButton.styleFrom(
                           elevation: 3,
                           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 50),
@@ -96,5 +99,11 @@ class Budget extends StatelessWidget{
          
       ),
     );
+  }
+  void navigateTo(){
+    final route = MaterialPageRoute(
+      builder:(context) =>Depense(),
+    );
+    Navigator.push(context as BuildContext, route);
   }
 }
